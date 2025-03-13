@@ -1,0 +1,60 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+
+# Django migrations
+**/migrations/*  
+!**/migrations/__init__.py
+
+# Database
+*.sqlite3
+*.db
+
+# Secrets and environment variables
+.env
+*.pem
+
+# Static and media files
+/static/
+/media/
+
+# Logs and debugging
+*.log
+debug.log
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+
+# Cache and build
+*.egg-info/
+*.pytest_cache/
+.DS_Store
+node_modules/
+dist/
+build/
+
+# Compiled frontend files (if using Webpack, React, or Vue)
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Docker
+docker-compose.override.yml
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# Coverage reports
+htmlcov/
+.coverage
+*.cover

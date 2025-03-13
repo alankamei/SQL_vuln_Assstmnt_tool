@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h2>SQLi Vulnerability Scanner</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Scan</button>
+    </form>
+    {% if result %}
+  <div class="mt-3 alert {% if result.error %}alert-danger{% else %}alert-success{% endif %}">
+    {% if result.error %}
+      {{ result.error }}
+    {% else %}
+      <strong>Vulnerable to Error-Based SQLi!</strong><br>
+      Detected Column Count: {{ result.success.column_count }}
+    {% endif %}
+  </div>
+{% endif %}
+</div>
+{% endblock %}
